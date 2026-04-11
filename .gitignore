@@ -4,3 +4,5 @@ v2rayN
 app/build
 app/Libbox.xcframework/
 **/xcuserdata/
+app/DerivedData/
+app/dist

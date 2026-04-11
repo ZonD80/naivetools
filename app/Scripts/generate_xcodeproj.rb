@@ -22,6 +22,8 @@ frameworks_group = project.frameworks_group || main_group.new_group("Frameworks"
 libbox_ref = frameworks_group.new_file("Libbox.xcframework")
 
 scripts_group.new_file("build_libbox.sh")
+scripts_group.new_file("libbox_flatten_framework.sh")
+scripts_group.new_file("flatten_libbox_xcframework.sh")
 scripts_group.new_file("generate_xcodeproj.rb")
 
 app_target = project.new_target(:application, "NaiveVPN", :ios, "17.0")
@@ -67,7 +69,7 @@ def configure_extension_target(target)
       "CODE_SIGN_ENTITLEMENTS" => "NaiveTunnelExtension/NaiveTunnelExtension.entitlements",
       "GENERATE_INFOPLIST_FILE" => "NO",
       "INFOPLIST_FILE" => "NaiveTunnelExtension/Info.plist",
-      "LD_RUNPATH_SEARCH_PATHS" => "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks",
+      "LD_RUNPATH_SEARCH_PATHS" => "$(inherited) @executable_path/../../Frameworks",
       "PRODUCT_BUNDLE_IDENTIFIER" => "$(BASE_PACKAGE_IDENTIFIER).extension",
       "PRODUCT_NAME" => "NaiveTunnelExtension",
       "SKIP_INSTALL" => "YES",
@@ -129,13 +131,13 @@ extension_group.new_file("Info.plist")
 extension_group.new_file("NaiveTunnelExtension.entitlements")
 
 extension_target.frameworks_build_phase.add_file_reference(libbox_ref)
-embed_frameworks = extension_target.new_copy_files_build_phase("Embed Frameworks")
+
+app_target.add_dependency(extension_target)
+embed_frameworks = app_target.new_copy_files_build_phase("Embed Frameworks")
 embed_frameworks.symbol_dst_subfolder_spec = :frameworks if embed_frameworks.respond_to?(:symbol_dst_subfolder_spec=)
 embed_frameworks.dst_subfolder_spec = "10"
 embedded_framework = embed_frameworks.add_file_reference(libbox_ref, true)
 embedded_framework.settings = { "ATTRIBUTES" => ["CodeSignOnCopy", "RemoveHeadersOnCopy"] }
-
-app_target.add_dependency(extension_target)
 embed_extensions = app_target.new_copy_files_build_phase("Embed App Extensions")
 embed_extensions.dst_subfolder_spec = "13"
 embedded_extension = embed_extensions.add_file_reference(extension_target.product_reference, true)

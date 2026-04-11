@@ -244,6 +244,7 @@
 				698EC77D79ADCB8D5B621AF9 /* Sources */,
 				0022579DEF41C797ED9A0DD2 /* Frameworks */,
 				48351C19A93508C0A0D9BECF /* Resources */,
+				3194E14DBCECDFA85DB2D364 /* Embed Frameworks */,
 				AA3213191DEB804A6E2D941F /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -263,7 +264,6 @@
 				0D84CF860D144F10B5FF70AA /* Sources */,
 				D82EE3F63BAF40BC51637823 /* Frameworks */,
 				1469F439C806EBF7BD18A865 /* Resources */,
-				3194E14DBCECDFA85DB2D364 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -523,6 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = NaiveVPN/NaiveVPN.entitlements;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = F44ZS9HT2P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NaiveVPN/Info.plist;
@@ -532,6 +533,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;
@@ -553,7 +555,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn.extension;
@@ -577,7 +578,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn.extension;
@@ -595,6 +595,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = NaiveVPN/NaiveVPN.entitlements;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = F44ZS9HT2P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NaiveVPN/Info.plist;
@@ -604,6 +605,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;

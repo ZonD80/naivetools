@@ -1,7 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+# shellcheck source=libbox_flatten_framework.sh
+source "$SCRIPT_DIR/libbox_flatten_framework.sh"
 BUILD_ROOT="${TMPDIR%/}/naivevpn-libbox-build"
 SING_BOX_DIR="$BUILD_ROOT/sing-box"
 GO_BIN="$(go env GOBIN)"
@@ -26,5 +29,7 @@ popd >/dev/null
 
 rm -rf "$ROOT_DIR/Libbox.xcframework"
 cp -R "$SING_BOX_DIR/Libbox.xcframework" "$ROOT_DIR/Libbox.xcframework"
+
+flatten_libbox_xcframework_at "$ROOT_DIR/Libbox.xcframework"
 
 echo "Libbox.xcframework was copied to $ROOT_DIR/Libbox.xcframework"

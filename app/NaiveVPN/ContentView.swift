@@ -16,12 +16,16 @@ struct ContentView: View {
                         }
                     }
 
-                    HStack {
+                    HStack(spacing: 0) {
                         Button(L10n.tr("New"), action: connectionStore.createProfile)
-                        Spacer()
+                            .buttonStyle(.borderless)
+                            .frame(maxWidth: .infinity)
                         Button(L10n.tr("Duplicate"), action: connectionStore.duplicateSelectedProfile)
-                        Spacer()
+                            .buttonStyle(.borderless)
+                            .frame(maxWidth: .infinity)
                         Button(L10n.tr("Delete"), role: .destructive, action: connectionStore.deleteSelectedProfile)
+                            .buttonStyle(.borderless)
+                            .frame(maxWidth: .infinity)
                             .disabled(!connectionStore.canDeleteProfile)
                     }
 
