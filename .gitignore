@@ -1,0 +1,6 @@
+.DS_Store
+naiveproxy
+v2rayN
+app/build
+app/Libbox.xcframework/
+**/xcuserdata/

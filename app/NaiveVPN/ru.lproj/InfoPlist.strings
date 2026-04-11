@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Наивный VPN";
+"CFBundleName" = "Наивный VPN";
+"NSCameraUsageDescription" = "Сканируйте QR-коды для импорта конфигураций прокси.";

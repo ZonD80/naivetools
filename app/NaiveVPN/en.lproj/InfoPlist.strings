@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Naive VPN";
+"CFBundleName" = "Naive VPN";
+"NSCameraUsageDescription" = "Scan QR codes to import proxy configurations.";

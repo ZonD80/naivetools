@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02CF05C3E1A6ECC0D9B5F8B9 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820FD1125C6AEF339912F08B /* Logger+Extension.swift */; };
+		0F9259D74D6A4C8182B75D01 /* NaiveQRCodeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9259D74D6A4C8182B75D03 /* NaiveQRCodeParser.swift */; };
+		0F9259D74D6A4C8182B75D02 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9259D74D6A4C8182B75D04 /* QRCodeScannerView.swift */; };
+		18F7E3DDF9ACDB9B4A44C734 /* NaiveConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E1B48C2D5ED0F53A26B4E /* NaiveConfigBuilder.swift */; };
+		1F548A592D0500312DEC94E6 /* NaiveProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5EF98B7890A21233D58B0 /* NaiveProfileStore.swift */; };
+		26533EA9CCABB57A59DE69ED /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820FD1125C6AEF339912F08B /* Logger+Extension.swift */; };
+		3164C572B0894C06720AAEF2 /* Libbox.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30C71730FBA0D9E35DEB5094 /* Libbox.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38D8498C52F9BC2FA658178E /* NaiveServerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE4EEBBA824D700C1E614C /* NaiveServerProfile.swift */; };
+		430D5AA1C68F33E68911C4FE /* Libbox.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C71730FBA0D9E35DEB5094 /* Libbox.xcframework */; };
+		51E65B7B568244AEBD738EA2 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A8A22B1EB40519373A6D9 /* Localized.swift */; };
+		5929D160C8725F3290722FEF /* NaiveServerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BE4EEBBA824D700C1E614C /* NaiveServerProfile.swift */; };
+		599688EF9E51B8D6EBCEC254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7930A248DAAEB1C3AA6E496A /* Foundation.framework */; };
+		5D7EF3D172DAC92ED59DCB49 /* ExtensionPlatformInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12027502CC1B9F0ECD6A0311 /* ExtensionPlatformInterface.swift */; };
+		5EA797558A9A926566E83016 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254183306D6CFB404D52DE1B /* UIKit.framework */; };
+		605A78EE3859CE4E3E413085 /* ExtensionErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A87A4282640B0C264301 /* ExtensionErrors.swift */; };
+		61D3F1866E7940FC210A1D65 /* ConnectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225ACFC9A5DB7EA61835A394 /* ConnectionStore.swift */; };
+		6FDB10A4CEFFD952A83B9FE0 /* Extension+Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC33CAB4758CB4702BC0B7 /* Extension+Iterator.swift */; };
+		72D6BD40906F72A8E614ADD3 /* NaiveTunnelExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C84DCD1AF7E882DFCB1626A3 /* NaiveTunnelExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7EA5CA62469680F4C1706DF0 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D246599D4F7E1F60441D5F9 /* AppConfiguration.swift */; };
+		887DCECF114D5D9DDD3F8241 /* NaiveConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E1B48C2D5ED0F53A26B4E /* NaiveConfigBuilder.swift */; };
+		8ACBA57BC5536772CE520347 /* NaiveVPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C33239A2A2F900B3A7BAF /* NaiveVPNApp.swift */; };
+		A37EEE4A9DFDDAF1EAB25281 /* ExtensionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E707C5D38F529256856EFCBD /* ExtensionProvider.swift */; };
+		AE9F159B8760C411C66F1910 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54CA392E0FCC7AA2220474 /* PacketTunnelProvider.swift */; };
+		B5C7817348D5D5D1A46C3FCF /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D246599D4F7E1F60441D5F9 /* AppConfiguration.swift */; };
+		BF23A4E29C9543EA8CA91314 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8450C8CC60D94B55B6E6CE52 /* InfoPlist.strings */; };
+		C153E09A5B3EF83284D10182 /* NaiveProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5EF98B7890A21233D58B0 /* NaiveProfileStore.swift */; };
+		C38C161C08D5B75BD206E89C /* AsyncNetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */; };
+		D21E29B3AF17217143FC5E4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7930A248DAAEB1C3AA6E496A /* Foundation.framework */; };
+		D76D7EF126957D44E43A8B89 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C870561C3831DE634A857B1A /* libresolv.tbd */; };
+		DBD80C279DC680492A263A4F /* Extension+RunBlocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9E7D9AB971BC36644CE83 /* Extension+RunBlocking.swift */; };
+		EC2FF4DCE19227D3DDE0A659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AA751794284EE30926D9F0 /* ContentView.swift */; };
+		FC927DA8A80C358D9A68EEB4 /* ExtensionStartOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2467E4C8C8F911844D7E45 /* ExtensionStartOptions.swift */; };
+		FDED5ED80ACE8E8F504D67B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B148638B4D184C045C4BAC /* Assets.xcassets */; };
+		FE8F62B569547785F0D5D40E /* AsyncNetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */; };
+		FFB584B2AD964A21B19D6941 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A8A22B1EB40519373A6D9 /* Localized.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20BE0A59F678288E888AA3E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02F94DD083B54E4CB2F29646 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2E8336510022272D954A1D2;
+			remoteInfo = NaiveTunnelExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3194E14DBCECDFA85DB2D364 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3164C572B0894C06720AAEF2 /* Libbox.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA3213191DEB804A6E2D941F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				72D6BD40906F72A8E614ADD3 /* NaiveTunnelExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A2467E4C8C8F911844D7E45 /* ExtensionStartOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionStartOptions.swift; sourceTree = "<group>"; };
+		0F9259D74D6A4C8182B75D03 /* NaiveQRCodeParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NaiveQRCodeParser.swift; sourceTree = "<group>"; };
+		0F9259D74D6A4C8182B75D04 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
+		12027502CC1B9F0ECD6A0311 /* ExtensionPlatformInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionPlatformInterface.swift; sourceTree = "<group>"; };
+		12AA751794284EE30926D9F0 /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		225ACFC9A5DB7EA61835A394 /* ConnectionStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectionStore.swift; sourceTree = "<group>"; };
+		254183306D6CFB404D52DE1B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		278A8A22B1EB40519373A6D9 /* Localized.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		30C71730FBA0D9E35DEB5094 /* Libbox.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = Libbox.xcframework; sourceTree = "<group>"; };
+		35BE4EEBBA824D700C1E614C /* NaiveServerProfile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NaiveServerProfile.swift; sourceTree = "<group>"; };
+		3F54CA392E0FCC7AA2220474 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		56014EA0E8E94059815A61A6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A7566664EB442FE2E10DF09 /* NaiveTunnelExtension.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = NaiveTunnelExtension.entitlements; sourceTree = "<group>"; };
+		5B7BDA5F6FC18A0D26691CD3 /* NaiveVPN.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = NaiveVPN.entitlements; sourceTree = "<group>"; };
+		664E1B48C2D5ED0F53A26B4E /* NaiveConfigBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NaiveConfigBuilder.swift; sourceTree = "<group>"; };
+		77CEBA6D42AD41BAAA690A82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7930A248DAAEB1C3AA6E496A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7A1D262801D44BEA85575C32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		820FD1125C6AEF339912F08B /* Logger+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Logger+Extension.swift"; sourceTree = "<group>"; };
+		8D0411D0E83A3CDEE185D8FB /* generate_xcodeproj.rb */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.ruby; path = generate_xcodeproj.rb; sourceTree = "<group>"; };
+		8D246599D4F7E1F60441D5F9 /* AppConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		8DD5EF98B7890A21233D58B0 /* NaiveProfileStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NaiveProfileStore.swift; sourceTree = "<group>"; };
+		99646938B2634CFB2D0732FB /* NaiveVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaiveVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B06F07D978F456C2635BB1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B148638B4D184C045C4BAC /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C84DCD1AF7E882DFCB1626A3 /* NaiveTunnelExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NaiveTunnelExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C870561C3831DE634A857B1A /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		CA0C33239A2A2F900B3A7BAF /* NaiveVPNApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NaiveVPNApp.swift; sourceTree = "<group>"; };
+		DEC9E7D9AB971BC36644CE83 /* Extension+RunBlocking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Extension+RunBlocking.swift"; sourceTree = "<group>"; };
+		E472A87A4282640B0C264301 /* ExtensionErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionErrors.swift; sourceTree = "<group>"; };
+		E707C5D38F529256856EFCBD /* ExtensionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionProvider.swift; sourceTree = "<group>"; };
+		E77CD17C30E0179FC461DEF8 /* build_libbox.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = build_libbox.sh; sourceTree = "<group>"; };
+		F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncNetworkExtension.swift; sourceTree = "<group>"; };
+		FDFC33CAB4758CB4702BC0B7 /* Extension+Iterator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Extension+Iterator.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0022579DEF41C797ED9A0DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				599688EF9E51B8D6EBCEC254 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82EE3F63BAF40BC51637823 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D21E29B3AF17217143FC5E4E /* Foundation.framework in Frameworks */,
+				5EA797558A9A926566E83016 /* UIKit.framework in Frameworks */,
+				D76D7EF126957D44E43A8B89 /* libresolv.tbd in Frameworks */,
+				430D5AA1C68F33E68911C4FE /* Libbox.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25A0198E930805BD5E80138B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7930A248DAAEB1C3AA6E496A /* Foundation.framework */,
+				254183306D6CFB404D52DE1B /* UIKit.framework */,
+				C870561C3831DE634A857B1A /* libresolv.tbd */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3204816F11C31F0CE4A41B06 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8D246599D4F7E1F60441D5F9 /* AppConfiguration.swift */,
+				278A8A22B1EB40519373A6D9 /* Localized.swift */,
+				820FD1125C6AEF339912F08B /* Logger+Extension.swift */,
+				F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */,
+				35BE4EEBBA824D700C1E614C /* NaiveServerProfile.swift */,
+				8DD5EF98B7890A21233D58B0 /* NaiveProfileStore.swift */,
+				664E1B48C2D5ED0F53A26B4E /* NaiveConfigBuilder.swift */,
+				0F9259D74D6A4C8182B75D03 /* NaiveQRCodeParser.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		3BB0D0222B187C28D7DB82C9 /* NaiveTunnelExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3F54CA392E0FCC7AA2220474 /* PacketTunnelProvider.swift */,
+				FDFC33CAB4758CB4702BC0B7 /* Extension+Iterator.swift */,
+				DEC9E7D9AB971BC36644CE83 /* Extension+RunBlocking.swift */,
+				E472A87A4282640B0C264301 /* ExtensionErrors.swift */,
+				0A2467E4C8C8F911844D7E45 /* ExtensionStartOptions.swift */,
+				E707C5D38F529256856EFCBD /* ExtensionProvider.swift */,
+				12027502CC1B9F0ECD6A0311 /* ExtensionPlatformInterface.swift */,
+				77CEBA6D42AD41BAAA690A82 /* Info.plist */,
+				5A7566664EB442FE2E10DF09 /* NaiveTunnelExtension.entitlements */,
+			);
+			path = NaiveTunnelExtension;
+			sourceTree = "<group>";
+		};
+		480CFD070117B4CB50818A3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99646938B2634CFB2D0732FB /* NaiveVPN.app */,
+				C84DCD1AF7E882DFCB1626A3 /* NaiveTunnelExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59ADA6BC1BEAB4B681308EE4 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E77CD17C30E0179FC461DEF8 /* build_libbox.sh */,
+				8D0411D0E83A3CDEE185D8FB /* generate_xcodeproj.rb */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		60F7F3BBC646B3AEBB12017A /* NaiveVPN */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C33239A2A2F900B3A7BAF /* NaiveVPNApp.swift */,
+				12AA751794284EE30926D9F0 /* ContentView.swift */,
+				225ACFC9A5DB7EA61835A394 /* ConnectionStore.swift */,
+				0F9259D74D6A4C8182B75D04 /* QRCodeScannerView.swift */,
+				A5B148638B4D184C045C4BAC /* Assets.xcassets */,
+				A2B06F07D978F456C2635BB1 /* Info.plist */,
+				8450C8CC60D94B55B6E6CE52 /* InfoPlist.strings */,
+				5B7BDA5F6FC18A0D26691CD3 /* NaiveVPN.entitlements */,
+			);
+			path = NaiveVPN;
+			sourceTree = "<group>";
+		};
+		A939D7E58B40CFBF82AF56F2 = {
+			isa = PBXGroup;
+			children = (
+				480CFD070117B4CB50818A3E /* Products */,
+				B208FE8CBA18640B38D495FB /* Frameworks */,
+				60F7F3BBC646B3AEBB12017A /* NaiveVPN */,
+				3BB0D0222B187C28D7DB82C9 /* NaiveTunnelExtension */,
+				3204816F11C31F0CE4A41B06 /* Shared */,
+				59ADA6BC1BEAB4B681308EE4 /* Scripts */,
+			);
+			sourceTree = "<group>";
+		};
+		B208FE8CBA18640B38D495FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C71730FBA0D9E35DEB5094 /* Libbox.xcframework */,
+				25A0198E930805BD5E80138B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39FF66E202FE19E90D68E4FA /* NaiveVPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4948CDF2C8EB2289F442C8A /* Build configuration list for PBXNativeTarget "NaiveVPN" */;
+			buildPhases = (
+				698EC77D79ADCB8D5B621AF9 /* Sources */,
+				0022579DEF41C797ED9A0DD2 /* Frameworks */,
+				48351C19A93508C0A0D9BECF /* Resources */,
+				AA3213191DEB804A6E2D941F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DC9C0F20C4BEE91307F3B86 /* PBXTargetDependency */,
+			);
+			name = NaiveVPN;
+			productName = NaiveVPN;
+			productReference = 99646938B2634CFB2D0732FB /* NaiveVPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2E8336510022272D954A1D2 /* NaiveTunnelExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7A2B956F08C69457F2C687F /* Build configuration list for PBXNativeTarget "NaiveTunnelExtension" */;
+			buildPhases = (
+				0D84CF860D144F10B5FF70AA /* Sources */,
+				D82EE3F63BAF40BC51637823 /* Frameworks */,
+				1469F439C806EBF7BD18A865 /* Resources */,
+				3194E14DBCECDFA85DB2D364 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaiveTunnelExtension;
+			productName = NaiveTunnelExtension;
+			productReference = C84DCD1AF7E882DFCB1626A3 /* NaiveTunnelExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02F94DD083B54E4CB2F29646 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+			};
+			buildConfigurationList = 8E8FCA17B973DFDD3B786E47 /* Build configuration list for PBXProject "NaiveVPN" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = A939D7E58B40CFBF82AF56F2;
+			productRefGroup = 480CFD070117B4CB50818A3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39FF66E202FE19E90D68E4FA /* NaiveVPN */,
+				C2E8336510022272D954A1D2 /* NaiveTunnelExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1469F439C806EBF7BD18A865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48351C19A93508C0A0D9BECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDED5ED80ACE8E8F504D67B4 /* Assets.xcassets in Resources */,
+				BF23A4E29C9543EA8CA91314 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D84CF860D144F10B5FF70AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA5CA62469680F4C1706DF0 /* AppConfiguration.swift in Sources */,
+				51E65B7B568244AEBD738EA2 /* Localized.swift in Sources */,
+				02CF05C3E1A6ECC0D9B5F8B9 /* Logger+Extension.swift in Sources */,
+				C38C161C08D5B75BD206E89C /* AsyncNetworkExtension.swift in Sources */,
+				38D8498C52F9BC2FA658178E /* NaiveServerProfile.swift in Sources */,
+				1F548A592D0500312DEC94E6 /* NaiveProfileStore.swift in Sources */,
+				887DCECF114D5D9DDD3F8241 /* NaiveConfigBuilder.swift in Sources */,
+				AE9F159B8760C411C66F1910 /* PacketTunnelProvider.swift in Sources */,
+				6FDB10A4CEFFD952A83B9FE0 /* Extension+Iterator.swift in Sources */,
+				DBD80C279DC680492A263A4F /* Extension+RunBlocking.swift in Sources */,
+				605A78EE3859CE4E3E413085 /* ExtensionErrors.swift in Sources */,
+				FC927DA8A80C358D9A68EEB4 /* ExtensionStartOptions.swift in Sources */,
+				A37EEE4A9DFDDAF1EAB25281 /* ExtensionProvider.swift in Sources */,
+				5D7EF3D172DAC92ED59DCB49 /* ExtensionPlatformInterface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698EC77D79ADCB8D5B621AF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ACBA57BC5536772CE520347 /* NaiveVPNApp.swift in Sources */,
+				EC2FF4DCE19227D3DDE0A659 /* ContentView.swift in Sources */,
+				61D3F1866E7940FC210A1D65 /* ConnectionStore.swift in Sources */,
+				0F9259D74D6A4C8182B75D02 /* QRCodeScannerView.swift in Sources */,
+				B5C7817348D5D5D1A46C3FCF /* AppConfiguration.swift in Sources */,
+				FFB584B2AD964A21B19D6941 /* Localized.swift in Sources */,
+				26533EA9CCABB57A59DE69ED /* Logger+Extension.swift in Sources */,
+				FE8F62B569547785F0D5D40E /* AsyncNetworkExtension.swift in Sources */,
+				5929D160C8725F3290722FEF /* NaiveServerProfile.swift in Sources */,
+				C153E09A5B3EF83284D10182 /* NaiveProfileStore.swift in Sources */,
+				18F7E3DDF9ACDB9B4A44C734 /* NaiveConfigBuilder.swift in Sources */,
+				0F9259D74D6A4C8182B75D01 /* NaiveQRCodeParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DC9C0F20C4BEE91307F3B86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NaiveTunnelExtension;
+			target = C2E8336510022272D954A1D2 /* NaiveTunnelExtension */;
+			targetProxy = 20BE0A59F678288E888AA3E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8450C8CC60D94B55B6E6CE52 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A1D262801D44BEA85575C32 /* en */,
+				56014EA0E8E94059815A61A6 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		813DD67C1F8F2F7496E2550B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_PACKAGE_IDENTIFIER = com.example.naivevpn;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A253F457EFDCFF5FE10D904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_PACKAGE_IDENTIFIER = com.example.naivevpn;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AABE67CF0A7A4CFCBDF8225F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = NaiveVPN/NaiveVPN.entitlements;
+				DEVELOPMENT_TEAM = F44ZS9HT2P;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NaiveVPN/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Naive VPN";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
+				PRODUCT_NAME = NaiveVPN;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC131837189E1E0D42E399E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = NaiveTunnelExtension/NaiveTunnelExtension.entitlements;
+				DEVELOPMENT_TEAM = F44ZS9HT2P;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NaiveTunnelExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn.extension;
+				PRODUCT_NAME = NaiveTunnelExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1ECE2F80829DDE81081D466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = NaiveTunnelExtension/NaiveTunnelExtension.entitlements;
+				DEVELOPMENT_TEAM = F44ZS9HT2P;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NaiveTunnelExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn.extension;
+				PRODUCT_NAME = NaiveTunnelExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+			};
+			name = Debug;
+		};
+		FA720D734A2C841F7EEC1043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = NaiveVPN/NaiveVPN.entitlements;
+				DEVELOPMENT_TEAM = F44ZS9HT2P;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NaiveVPN/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Naive VPN";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
+				PRODUCT_NAME = NaiveVPN;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E8FCA17B973DFDD3B786E47 /* Build configuration list for PBXProject "NaiveVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813DD67C1F8F2F7496E2550B /* Debug */,
+				9A253F457EFDCFF5FE10D904 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7A2B956F08C69457F2C687F /* Build configuration list for PBXNativeTarget "NaiveTunnelExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC131837189E1E0D42E399E3 /* Release */,
+				E1ECE2F80829DDE81081D466 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4948CDF2C8EB2289F442C8A /* Build configuration list for PBXNativeTarget "NaiveVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA720D734A2C841F7EEC1043 /* Release */,
+				AABE67CF0A7A4CFCBDF8225F /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02F94DD083B54E4CB2F29646 /* Project object */;
+}
