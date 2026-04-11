@@ -56,17 +56,17 @@ rm /tmp/Libbox.xcframework.zip
 
 ### Скачать скрипт через `wget` и запустить в `screen`
 
-Подставьте URL **raw**-файла из вашего репозитория (ветка `main` или `master`):
+Прямая ссылка на **raw** (ветка `main`):
 
 ```text
-https://raw.githubusercontent.com/OWNER/REPO/BRANCH/server/start_server.sh
+https://raw.githubusercontent.com/ZonD80/naivetools/main/server/start_server.sh
 ```
 
 Пример:
 
 ```bash
 mkdir -p ~/naive-server && cd ~/naive-server
-wget -O start_server.sh "https://raw.githubusercontent.com/OWNER/REPO/main/server/start_server.sh"
+wget -O start_server.sh "https://raw.githubusercontent.com/ZonD80/naivetools/main/server/start_server.sh"
 chmod +x start_server.sh
 ```
 
@@ -84,11 +84,13 @@ sudo ./start_server.sh
 ### Если репозиторий уже клонирован
 
 ```bash
-cd /path/to/naive-ios/server
+cd naivetools/server
 chmod +x start_server.sh
 screen -S naive-caddy
 sudo ./start_server.sh
 ```
+
+Каталог `naivetools` — это репозиторий после `git clone https://github.com/ZonD80/naivetools.git`.
 
 При повторном запуске, если `/etc/caddy/Caddyfile` уже есть, интерактивные вопросы про домен и учётные данные пропускаются — используется существующая конфигурация.
 
