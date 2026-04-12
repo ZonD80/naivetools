@@ -4,7 +4,7 @@
 
 # All-In-One Наивный VPN
 
-Монорепозиторий с **iOS-клиентом** для NaiveProxy (Packet Tunnel + sing-box `Libbox`) и **скриптом сервера** на Caddy с плагином forwardproxy (naive).
+Монорепозиторий с **iOS-клиентом** для NaiveProxy (Packet Tunnel + sing-box `Libbox`) и **run-and-forget скриптом сервера** на Caddy с плагином forwardproxy (naive).
 
 <p align="center">
   <a href="https://appdb.to/details/8ca8a41db219d2c36acca881628efb1d26e32115">
@@ -44,13 +44,18 @@ unzip -o /tmp/Libbox.xcframework.zip -d app
 rm /tmp/Libbox.xcframework.zip
 ```
 
+Сделать его совместимым с iOS билдами
+
+```bash
+./app/Scripts/libbox_flatten_framework.sh
+```
+
 2. Открыть `NaiveVPN.xcodeproj` в Xcode.
 
-3. При необходимости задать команду подписи и префикс bundle id (`BASE_PACKAGE_IDENTIFIER`).
+3. Установить параметры цифровой подписи.
 
 4. Собрать и запускать на **реальном устройстве** (Packet Tunnel в симуляторе не работает).
 
-Подробности — в [`app/README.md`](app/README.md).
 
 ## Сервер (`server/start_server.sh`)
 
@@ -58,7 +63,7 @@ rm /tmp/Libbox.xcframework.zip
 
 - проверяет, что домен указывает на публичный IP машины;
 - при первом запуске спрашивает домен, email для Let’s Encrypt, логин и пароль прокси и пишет `/etc/caddy/Caddyfile`;
-- скачивает статический `index.html` и бинарник **Caddy с forwardproxy (naive)**;
+- скачивает статический `index.html` (спасибо Игорю Сысоеву!) и бинарник **Caddy с forwardproxy (naive)** (той версии, которую я проверил - и она работает);
 - выводит share-ссылку и при наличии утилит — QR для импорта в naive-клиент;
 - запускает Caddy в foreground (`exec`).
 
@@ -103,6 +108,14 @@ sudo ./start_server.sh
 Каталог `naivetools` — это репозиторий после `git clone https://github.com/ZonD80/naivetools.git`.
 
 При повторном запуске, если `/etc/caddy/Caddyfile` уже есть, интерактивные вопросы про домен и учётные данные пропускаются — используется существующая конфигурация.
+
+## Благодарности
+
+- [NaiveProxy](https://github.com/klzgrad/naiveproxy) — исходная реализация.
+- [forwardproxy](https://github.com/klzgrad/forwardproxy) (naive) — серверная часть.
+- [nginx](https://github.com/nginx/nginx) — замечательный веб-сервер и типовая страница по умолчанию; nginx обслуживает порядка 70% сайтов в интернете (по распространённости среди веб-серверов).
+
+**Android:** можно использовать клиент [Exclave](https://github.com/dyhkwong/Exclave) и отдельный релиз **Naive Proxy Plugin** от upstream (см. раздел Download в репозитории Exclave).
 
 ## Поддержка
 
