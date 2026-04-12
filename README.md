@@ -1,10 +1,12 @@
 <p align="center">
-  <img src="app/NaiveVPN/Assets.xcassets/AppIcon.appiconset/icon-1024.png" alt="All-In-One Наивный VPN" width="128" height="128" />  
+  <img src="app/NaiveVPN/Assets.xcassets/AppIcon.appiconset/icon-1024.png" alt="All-In-One Naive VPN" width="128" height="128" />  
 </p>
 
-# All-In-One Наивный VPN
+# All-In-One Naive VPN
 
-Монорепозиторий с **iOS-клиентом** для NaiveProxy (Packet Tunnel + sing-box `Libbox`) и **run-and-forget скриптом сервера** на Caddy с плагином forwardproxy (naive).
+[Russian version](README_ru.md)
+
+A monorepo with an **iOS client** for NaiveProxy (Packet Tunnel + sing-box `Libbox`) and a **run-and-forget server script** using Caddy with the forwardproxy (naive) plugin.
 
 <p align="center">
   <a href="https://appdb.to/details/8ca8a41db219d2c36acca881628efb1d26e32115">
@@ -16,68 +18,68 @@
   </a>
 </p>
 
-## Состав
+## Layout
 
-| Каталог   | Назначение                                                                          |
-| --------- | ----------------------------------------------------------------------------------- |
-| `app/`    | iOS-приложение `NaiveVPN`, расширение туннеля, общий код конфигурации               |
-| `misc/`   | Дробленный архив `Libbox.xcframework` (восстановление в `app/` — см. ниже)          |
-| `server/` | `start_server.sh` — установка и запуск Caddy (naive forward proxy) на Linux-сервере |
+| Directory | Purpose                                                                                 |
+| --------- | --------------------------------------------------------------------------------------- |
+| `app/`    | `NaiveVPN` iOS app, tunnel extension, shared configuration code                         |
+| `misc/`   | Split archive of `Libbox.xcframework` (restore into `app/` — see below)                 |
+| `server/` | `start_server.sh` — install and run Caddy (naive forward proxy) on a Linux server       |
 
-## iOS-приложение (`app/`)
+## iOS app (`app/`)
 
-1. Получить `Libbox.xcframework` в каталоге `app/` — **либо** собрать из исходников, **либо** восстановить из архива в `misc/` (фреймворк в git не хранится из‑за лимитов GitHub):
+1. Obtain `Libbox.xcframework` under `app/` — **either** build from source **or** restore from the archive in `misc/` (the framework is not kept in git due to GitHub limits):
 
-Сборка:
+Build:
 
 ```bash
 cd app
 ./Scripts/build_libbox.sh
 ```
 
-Восстановление из `misc/` (части `Libbox.xcframework.zip.aa`, `.ab`, … склеиваются в один zip, затем распаковка в `app/`):
+Restore from `misc/` (parts `Libbox.xcframework.zip.aa`, `.ab`, … are concatenated into one zip, then unpacked into `app/`):
 
 ```bash
-# из корня репозитория
+# from the repository root
 cat misc/Libbox.xcframework.zip.* > /tmp/Libbox.xcframework.zip
 unzip -o /tmp/Libbox.xcframework.zip -d app
 rm /tmp/Libbox.xcframework.zip
 ```
 
-Сделать его совместимым с iOS билдами
+Make it compatible with iOS builds:
 
 ```bash
 ./app/Scripts/libbox_flatten_framework.sh
 ```
 
-2. Открыть `NaiveVPN.xcodeproj` в Xcode.
+2. Open `NaiveVPN.xcodeproj` in Xcode.
 
-3. Установить параметры цифровой подписи.
+3. Configure code signing.
 
-4. Собрать и запускать на **реальном устройстве** (Packet Tunnel в симуляторе не работает).
+4. Build and run on a **physical device** (Packet Tunnel does not work in the simulator).
 
 
-## Сервер (`server/start_server.sh`)
+## Server (`server/start_server.sh`)
 
-Скрипт рассчитан на **Linux**, запуск **от root** (`sudo`). Он:
+The script targets **Linux** and must be run **as root** (`sudo`). It:
 
-- проверяет, что домен указывает на публичный IP машины;
-- при первом запуске спрашивает домен, email для Let’s Encrypt, логин и пароль прокси и пишет `/etc/caddy/Caddyfile`;
-- скачивает статический `index.html` (спасибо Игорю Сысоеву!) и бинарник **Caddy с forwardproxy (naive)** (той версии, которую я проверил - и она работает);
-- выводит share-ссылку и при наличии утилит — QR для импорта в naive-клиент;
-- запускает Caddy в foreground (`exec`).
+- checks that the domain resolves to the machine’s public IP;
+- on first run, asks for the domain, Let’s Encrypt email, proxy login and password, and writes `/etc/caddy/Caddyfile`;
+- downloads a static `index.html` (thanks, Igor Sysoev!) and a **Caddy binary with forwardproxy (naive)** (the version I tested — and it works);
+- prints a share link and, if utilities are available, a QR code for import into a naive client;
+- runs Caddy in the foreground (`exec`).
 
-Нужны: `python3`, `tar`, а для скачивания — `curl` или `wget`; для проверки DNS — `dig`, `getent` или `host`.
+Requirements: `python3`, `tar`, and for downloads `curl` or `wget`; for DNS checks `dig`, `getent`, or `host`.
 
-### Скачать скрипт через `wget` и запустить в `screen`
+### Download the script with `wget` and run in `screen`
 
-Прямая ссылка на **raw** (ветка `main`):
+Direct **raw** link (branch `main`):
 
 ```text
 https://raw.githubusercontent.com/ZonD80/naivetools/main/server/start_server.sh
 ```
 
-Пример:
+Example:
 
 ```bash
 mkdir -p ~/naive-server && cd ~/naive-server
@@ -85,18 +87,18 @@ wget -O start_server.sh "https://raw.githubusercontent.com/ZonD80/naivetools/mai
 chmod +x start_server.sh
 ```
 
-Сессия `screen`, чтобы процесс остался после выхода из SSH:
+`screen` session so the process survives SSH disconnect:
 
 ```bash
 screen -S naive-caddy
 sudo ./start_server.sh
 ```
 
-Выйти из `screen`, оставив Caddy работать: **Ctrl+A**, затем **D**. Вернуться: `screen -r naive-caddy`.
+Detach from `screen` while leaving Caddy running: **Ctrl+A**, then **D**. Reattach: `screen -r naive-caddy`.
 
-Перед первым запуском настройте **A-запись DNS** домена на IP этого сервера — скрипт это проверит.
+Before the first run, point the domain’s **DNS A record** at this server’s IP — the script verifies this.
 
-### Если репозиторий уже клонирован
+### If the repository is already cloned
 
 ```bash
 cd naivetools/server
@@ -105,18 +107,18 @@ screen -S naive-caddy
 sudo ./start_server.sh
 ```
 
-Каталог `naivetools` — это репозиторий после `git clone https://github.com/ZonD80/naivetools.git`.
+The `naivetools` directory is the repository after `git clone https://github.com/ZonD80/naivetools.git`.
 
-При повторном запуске, если `/etc/caddy/Caddyfile` уже есть, интерактивные вопросы про домен и учётные данные пропускаются — используется существующая конфигурация.
+On subsequent runs, if `/etc/caddy/Caddyfile` already exists, interactive prompts for domain and credentials are skipped — the existing configuration is used.
 
-## Благодарности
+## Acknowledgements
 
-- [NaiveProxy](https://github.com/klzgrad/naiveproxy) — исходная реализация.
-- [forwardproxy](https://github.com/klzgrad/forwardproxy) (naive) — серверная часть.
-- [nginx](https://github.com/nginx/nginx) — замечательный веб-сервер и типовая страница по умолчанию; nginx обслуживает порядка 70% сайтов в интернете (по распространённости среди веб-серверов).
+- [NaiveProxy](https://github.com/klzgrad/naiveproxy) — original implementation.
+- [forwardproxy](https://github.com/klzgrad/forwardproxy) (naive) — server side.
+- [nginx](https://github.com/nginx/nginx) — excellent web server and typical default page; nginx serves roughly 70% of sites on the web (by share among web servers).
 
-**Android:** можно использовать клиент [Exclave](https://github.com/dyhkwong/Exclave) и отдельный релиз **Naive Proxy Plugin** от upstream (см. раздел Download в репозитории Exclave).
+**Android:** you can use the [Exclave](https://github.com/dyhkwong/Exclave) client and the separate upstream **Naive Proxy Plugin** release (see the Download section in the Exclave repo).
 
-## Поддержка
+## Support
 
-Если проект оказался полезен — можно угостить автора кофе на [Buy Me a Coffee](https://buymeacoffee.com/zond80).
+If this project helped you, you can buy the author a coffee on [Buy Me a Coffee](https://buymeacoffee.com/zond80).
