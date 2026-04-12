@@ -1,10 +1,20 @@
 <p align="center">
-  <img src="app/NaiveVPN/Assets.xcassets/AppIcon.appiconset/icon-1024.png" alt="All-In-One Наивный VPN" width="128" height="128" />
+  <img src="app/NaiveVPN/Assets.xcassets/AppIcon.appiconset/icon-1024.png" alt="All-In-One Наивный VPN" width="128" height="128" />  
 </p>
 
 # All-In-One Наивный VPN
 
 Монорепозиторий с **iOS-клиентом** для NaiveProxy (Packet Tunnel + sing-box `Libbox`) и **скриптом сервера** на Caddy с плагином forwardproxy (naive).
+
+<p align="center">
+  <a href="https://appdb.to/details/8ca8a41db219d2c36acca881628efb1d26e32115">
+    <img
+      title="Get from appdb"
+      src="https://s3cdn.dbservices.to/official_buttons/get_white.png"
+      width="100"
+    />
+  </a>
+</p>
 
 ## Состав
 
