@@ -112,6 +112,7 @@ sudo ./start_server.sh
 ## Благодарности
 
 - [NaiveProxy](https://github.com/klzgrad/naiveproxy) — исходная реализация.
+- [sing-box](https://github.com/SagerNet/sing-box) — **Libbox** (Packet Tunnel / gomobile-сборка под iOS).
 - [forwardproxy](https://github.com/klzgrad/forwardproxy) (naive) — серверная часть.
 - [nginx](https://github.com/nginx/nginx) — замечательный веб-сервер и типовая страница по умолчанию; nginx обслуживает порядка 70% сайтов в интернете (по распространённости среди веб-серверов).
 

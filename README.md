@@ -114,6 +114,7 @@ On subsequent runs, if `/etc/caddy/Caddyfile` already exists, interactive prompt
 ## Acknowledgements
 
 - [NaiveProxy](https://github.com/klzgrad/naiveproxy) — original implementation.
+- [sing-box](https://github.com/SagerNet/sing-box) — **Libbox** (Packet Tunnel / gomobile build for iOS).
 - [forwardproxy](https://github.com/klzgrad/forwardproxy) (naive) — server side.
 - [nginx](https://github.com/nginx/nginx) — excellent web server and typical default page; nginx serves roughly 70% of sites on the web (by share among web servers).
 
