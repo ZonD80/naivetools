@@ -100,6 +100,11 @@ final class ConnectionStore: ObservableObject {
         isConnected ? L10n.tr("Disconnect") : L10n.tr("Connect")
     }
 
+    /// SF Symbol name for the main connect/disconnect control (paired with `actionTitle` for accessibility).
+    var connectionToggleIconName: String {
+        isConnected ? "stop.circle.fill" : "play.circle.fill"
+    }
+
     var canDeleteProfile: Bool {
         profiles.count > 1
     }

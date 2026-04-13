@@ -234,4 +234,63 @@ enum NaiveQRCodeParser {
 
         return (trimmedValue, nil)
     }
+
+    /// Builds a share URL that `parse(_:)` can read back. Returns `nil` when the profile has no host.
+    static func shareLinkString(for profile: NaiveServerProfile) -> String? {
+        let host = profile.trimmedHost
+        guard !host.isEmpty else {
+            return nil
+        }
+
+        let scheme: String
+        switch profile.type {
+        case .https:
+            scheme = "naive+https"
+        case .http2:
+            scheme = "http2"
+        case .http3:
+            scheme = "naive+quic"
+        }
+
+        let authority = buildShareAuthority(for: profile)
+        var result = "\(scheme)://\(authority)"
+        if !profile.trimmedName.isEmpty {
+            let encoded = profile.name.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? profile.name
+            result += "#\(encoded)"
+        }
+        return result
+    }
+
+    private static func buildShareAuthority(for profile: NaiveServerProfile) -> String {
+        let hostPort = formatHostPort(host: profile.trimmedHost, port: profile.port)
+        let user = profile.trimmedUser
+        let password = profile.password
+
+        if user.isEmpty && password.isEmpty {
+            return "@\(hostPort)"
+        }
+
+        let encodedUser = percentEncodeUserInfoComponent(user)
+        let encodedPassword = percentEncodeUserInfoComponent(password)
+
+        if user.isEmpty {
+            return ":\(encodedPassword)@\(hostPort)"
+        }
+
+        return "\(encodedUser):\(encodedPassword)@\(hostPort)"
+    }
+
+    private static func formatHostPort(host: String, port: String) -> String {
+        let portString = port.isEmpty ? "443" : port
+        if host.contains(":"), !host.hasPrefix("[") {
+            return "[\(host)]:\(portString)"
+        }
+        return "\(host):\(portString)"
+    }
+
+    private static func percentEncodeUserInfoComponent(_ value: String) -> String {
+        var allowed = CharacterSet.alphanumerics
+        allowed.insert(charactersIn: "-._~")
+        return value.addingPercentEncoding(withAllowedCharacters: allowed) ?? value
+    }
 }

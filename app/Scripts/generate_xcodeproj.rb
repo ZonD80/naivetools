@@ -86,6 +86,8 @@ app_files = %w[
   NaiveVPNApp.swift
   ContentView.swift
   ConnectionStore.swift
+  ShareProfileSheet.swift
+  AppdbVersionUpdateChecker.swift
 ]
 
 shared_files = %w[

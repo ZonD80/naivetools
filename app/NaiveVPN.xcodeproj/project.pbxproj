@@ -25,6 +25,7 @@
 		61D3F1866E7940FC210A1D65 /* ConnectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225ACFC9A5DB7EA61835A394 /* ConnectionStore.swift */; };
 		6FDB10A4CEFFD952A83B9FE0 /* Extension+Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC33CAB4758CB4702BC0B7 /* Extension+Iterator.swift */; };
 		72D6BD40906F72A8E614ADD3 /* NaiveTunnelExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C84DCD1AF7E882DFCB1626A3 /* NaiveTunnelExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7AA1B2C3D4E5F60718293A4B1 /* AppdbVersionUpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1B2C3D4E5F60718293A4B0 /* AppdbVersionUpdateChecker.swift */; };
 		7EA5CA62469680F4C1706DF0 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D246599D4F7E1F60441D5F9 /* AppConfiguration.swift */; };
 		887DCECF114D5D9DDD3F8241 /* NaiveConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E1B48C2D5ED0F53A26B4E /* NaiveConfigBuilder.swift */; };
 		8ACBA57BC5536772CE520347 /* NaiveVPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C33239A2A2F900B3A7BAF /* NaiveVPNApp.swift */; };
@@ -38,6 +39,7 @@
 		D76D7EF126957D44E43A8B89 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C870561C3831DE634A857B1A /* libresolv.tbd */; };
 		DBD80C279DC680492A263A4F /* Extension+RunBlocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9E7D9AB971BC36644CE83 /* Extension+RunBlocking.swift */; };
 		EC2FF4DCE19227D3DDE0A659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AA751794284EE30926D9F0 /* ContentView.swift */; };
+		F1A2B3C4D5E60718293A4B5C /* ShareProfileSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B3C4D5E60718293A4B5D /* ShareProfileSheet.swift */; };
 		FC927DA8A80C358D9A68EEB4 /* ExtensionStartOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2467E4C8C8F911844D7E45 /* ExtensionStartOptions.swift */; };
 		FDED5ED80ACE8E8F504D67B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B148638B4D184C045C4BAC /* Assets.xcassets */; };
 		FE8F62B569547785F0D5D40E /* AsyncNetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */; };
@@ -98,6 +100,7 @@
 		77CEBA6D42AD41BAAA690A82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7930A248DAAEB1C3AA6E496A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7A1D262801D44BEA85575C32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7AA1B2C3D4E5F60718293A4B0 /* AppdbVersionUpdateChecker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppdbVersionUpdateChecker.swift; sourceTree = "<group>"; };
 		820FD1125C6AEF339912F08B /* Logger+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Logger+Extension.swift"; sourceTree = "<group>"; };
 		8D0411D0E83A3CDEE185D8FB /* generate_xcodeproj.rb */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.ruby; path = generate_xcodeproj.rb; sourceTree = "<group>"; };
 		8D246599D4F7E1F60441D5F9 /* AppConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		E472A87A4282640B0C264301 /* ExtensionErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionErrors.swift; sourceTree = "<group>"; };
 		E707C5D38F529256856EFCBD /* ExtensionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionProvider.swift; sourceTree = "<group>"; };
 		E77CD17C30E0179FC461DEF8 /* build_libbox.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = build_libbox.sh; sourceTree = "<group>"; };
+		F1A2B3C4D5E60718293A4B5D /* ShareProfileSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareProfileSheet.swift; sourceTree = "<group>"; };
 		F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncNetworkExtension.swift; sourceTree = "<group>"; };
 		FDFC33CAB4758CB4702BC0B7 /* Extension+Iterator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Extension+Iterator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +208,8 @@
 				CA0C33239A2A2F900B3A7BAF /* NaiveVPNApp.swift */,
 				12AA751794284EE30926D9F0 /* ContentView.swift */,
 				225ACFC9A5DB7EA61835A394 /* ConnectionStore.swift */,
+				7AA1B2C3D4E5F60718293A4B0 /* AppdbVersionUpdateChecker.swift */,
+				F1A2B3C4D5E60718293A4B5D /* ShareProfileSheet.swift */,
 				0F9259D74D6A4C8182B75D04 /* QRCodeScannerView.swift */,
 				A5B148638B4D184C045C4BAC /* Assets.xcassets */,
 				A2B06F07D978F456C2635BB1 /* Info.plist */,
@@ -351,6 +357,7 @@
 				8ACBA57BC5536772CE520347 /* NaiveVPNApp.swift in Sources */,
 				EC2FF4DCE19227D3DDE0A659 /* ContentView.swift in Sources */,
 				61D3F1866E7940FC210A1D65 /* ConnectionStore.swift in Sources */,
+				F1A2B3C4D5E60718293A4B5C /* ShareProfileSheet.swift in Sources */,
 				0F9259D74D6A4C8182B75D02 /* QRCodeScannerView.swift in Sources */,
 				B5C7817348D5D5D1A46C3FCF /* AppConfiguration.swift in Sources */,
 				FFB584B2AD964A21B19D6941 /* Localized.swift in Sources */,
@@ -359,6 +366,7 @@
 				5929D160C8725F3290722FEF /* NaiveServerProfile.swift in Sources */,
 				C153E09A5B3EF83284D10182 /* NaiveProfileStore.swift in Sources */,
 				18F7E3DDF9ACDB9B4A44C734 /* NaiveConfigBuilder.swift in Sources */,
+				7AA1B2C3D4E5F60718293A4B1 /* AppdbVersionUpdateChecker.swift in Sources */,
 				0F9259D74D6A4C8182B75D01 /* NaiveQRCodeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,7 +531,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = NaiveVPN/NaiveVPN.entitlements;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F44ZS9HT2P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NaiveVPN/Info.plist;
@@ -533,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;
@@ -595,7 +603,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = NaiveVPN/NaiveVPN.entitlements;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F44ZS9HT2P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NaiveVPN/Info.plist;
@@ -605,7 +613,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;

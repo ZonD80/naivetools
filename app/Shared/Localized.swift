@@ -8,6 +8,10 @@ enum L10n {
         "New": "Новый",
         "Duplicate": "Дублировать",
         "Delete": "Удалить",
+        "Share": "Поделиться",
+        "Link": "Ссылка",
+        "Copy": "Копировать",
+        "Copied": "Скопировано",
         "Scan QR Code": "Сканировать QR-код",
         "Server": "Сервер",
         "Name": "Имя",
@@ -49,7 +53,8 @@ enum L10n {
         "Host is required.": "Требуется хост.",
         "User is required.": "Требуется пользователь.",
         "Password is required.": "Требуется пароль.",
-        "Port must be a number between 1 and 65535.": "Порт должен быть числом от 1 до 65535."
+        "Port must be a number between 1 and 65535.": "Порт должен быть числом от 1 до 65535.",
+        "Opens appdb in Safari": "Открывает appdb в Safari"
     ]
 
     private static var usesRussian: Bool {
@@ -82,5 +87,12 @@ enum L10n {
         }
 
         return "\(baseName) Copy"
+    }
+
+    static func newVersionOnAppdbBanner(version: String) -> String {
+        if usesRussian {
+            return "Новая версия \(version) на appdb"
+        }
+        return "New version \(version) on appdb"
     }
 }
