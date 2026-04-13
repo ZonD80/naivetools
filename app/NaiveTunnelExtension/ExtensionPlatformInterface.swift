@@ -109,62 +109,6 @@ final class ExtensionPlatformInterface: NSObject, LibboxPlatformInterfaceProtoco
             ipv4Settings.excludedRoutes = ipv4ExcludedRoutes
             settings.ipv4Settings = ipv4Settings
 
-            var ipv6Addresses: [String] = []
-            var ipv6PrefixLengths: [NSNumber] = []
-            let ipv6AddressIterator = options.getInet6Address()!
-            while ipv6AddressIterator.hasNext() {
-                let prefix = ipv6AddressIterator.next()!
-                ipv6Addresses.append(prefix.address())
-                ipv6PrefixLengths.append(NSNumber(value: prefix.prefix()))
-            }
-
-            let ipv6Settings = NEIPv6Settings(addresses: ipv6Addresses, networkPrefixLengths: ipv6PrefixLengths)
-            var ipv6Routes: [NEIPv6Route] = []
-            var ipv6ExcludedRoutes: [NEIPv6Route] = []
-
-            let ipv6RouteIterator = options.getInet6RouteAddress()!
-            if ipv6RouteIterator.hasNext() {
-                while ipv6RouteIterator.hasNext() {
-                    let prefix = ipv6RouteIterator.next()!
-                    ipv6Routes.append(
-                        NEIPv6Route(
-                            destinationAddress: prefix.address(),
-                            networkPrefixLength: NSNumber(value: prefix.prefix())
-                        )
-                    )
-                }
-            } else if prefs.autoRouteUseSubRangesByDefault {
-                ipv6Routes.append(NEIPv6Route(destinationAddress: "100::", networkPrefixLength: 8))
-                ipv6Routes.append(NEIPv6Route(destinationAddress: "200::", networkPrefixLength: 7))
-                ipv6Routes.append(NEIPv6Route(destinationAddress: "400::", networkPrefixLength: 6))
-                ipv6Routes.append(NEIPv6Route(destinationAddress: "800::", networkPrefixLength: 5))
-                ipv6Routes.append(NEIPv6Route(destinationAddress: "1000::", networkPrefixLength: 4))
-                ipv6Routes.append(NEIPv6Route(destinationAddress: "2000::", networkPrefixLength: 3))
-                ipv6Routes.append(NEIPv6Route(destinationAddress: "4000::", networkPrefixLength: 2))
-                ipv6Routes.append(NEIPv6Route(destinationAddress: "8000::", networkPrefixLength: 1))
-            } else {
-                ipv6Routes.append(.default())
-            }
-
-            let ipv6ExcludeIterator = options.getInet6RouteExcludeAddress()!
-            while ipv6ExcludeIterator.hasNext() {
-                let prefix = ipv6ExcludeIterator.next()!
-                ipv6ExcludedRoutes.append(
-                    NEIPv6Route(
-                        destinationAddress: prefix.address(),
-                        networkPrefixLength: NSNumber(value: prefix.prefix())
-                    )
-                )
-            }
-
-            if prefs.excludeDefaultRoute, !ipv6Routes.isEmpty {
-                ipv6ExcludedRoutes.append(NEIPv6Route(destinationAddress: "::", networkPrefixLength: 127))
-            }
-
-            ipv6Settings.includedRoutes = ipv6Routes
-            ipv6Settings.excludedRoutes = ipv6ExcludedRoutes
-            settings.ipv6Settings = ipv6Settings
-
             let hasDefaultIPv4Route = ipv4Routes.contains {
                 $0.destinationAddress == "0.0.0.0" && $0.destinationSubnetMask == "0.0.0.0"
             }
