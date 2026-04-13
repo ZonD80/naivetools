@@ -62,7 +62,7 @@ enum NaiveQRCodeParser {
         let user = stringValue(in: json, keys: ["user", "username"]) ?? ""
         let password = stringValue(in: json, keys: ["password"]) ?? ""
         let port = stringValue(in: json, keys: ["port"]) ?? "443"
-        let typeValue = stringValue(in: json, keys: ["type", "mode"]) ?? NaiveProxyType.https.rawValue
+        let typeValue = stringValue(in: json, keys: ["type", "mode"]) ?? NaiveProxyType.http3.rawValue
 
         return NaiveServerProfile(
             name: title,
@@ -169,8 +169,10 @@ enum NaiveQRCodeParser {
             return .http3
         case "HTTP/2", "HTTP2":
             return .http2
-        default:
+        case "HTTPS":
             return .https
+        default:
+            return .http3
         }
     }
 

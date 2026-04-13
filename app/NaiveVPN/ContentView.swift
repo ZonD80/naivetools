@@ -12,6 +12,7 @@ struct ContentView: View {
     @StateObject private var appdbVersionChecker = AppdbVersionUpdateChecker()
     @State private var showingAlert = false
     @State private var showingQRScanner = false
+    @State private var showingPasteConfiguration = false
     @State private var shareSheetPayload: ShareSheetPayload?
 
     var body: some View {
@@ -56,6 +57,15 @@ struct ContentView: View {
                         .buttonStyle(.borderless)
                         .frame(maxWidth: .infinity)
                         .accessibilityLabel(L10n.tr("Scan QR Code"))
+
+                        Button {
+                            showingPasteConfiguration = true
+                        } label: {
+                            Image(systemName: "doc.on.clipboard")
+                        }
+                        .buttonStyle(.borderless)
+                        .frame(maxWidth: .infinity)
+                        .accessibilityLabel(L10n.tr("Paste configuration"))
 
                         Button(action: connectionStore.createProfile) {
                             Image(systemName: "plus.circle")
@@ -103,7 +113,7 @@ struct ContentView: View {
 
                     Picker(L10n.tr("Type"), selection: $connectionStore.profile.type) {
                         ForEach(NaiveProxyType.allCases) { proxyType in
-                            Text(proxyType.rawValue).tag(proxyType)
+                            Text(proxyType.pickerTitle).tag(proxyType)
                         }
                     }
                     .pickerStyle(.segmented)
@@ -177,6 +187,16 @@ struct ContentView: View {
                         }
                     },
                     onFailure: { message in
+                        connectionStore.errorMessage = message
+                    }
+                )
+            }
+            .sheet(isPresented: $showingPasteConfiguration) {
+                PasteConfigurationSheet(
+                    onImport: { payload in
+                        try connectionStore.importProfile(fromQRCodePayload: payload)
+                    },
+                    onError: { message in
                         connectionStore.errorMessage = message
                     }
                 )

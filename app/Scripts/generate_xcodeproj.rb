@@ -87,6 +87,7 @@ app_files = %w[
   ContentView.swift
   ConnectionStore.swift
   ShareProfileSheet.swift
+  PasteConfigurationSheet.swift
   AppdbVersionUpdateChecker.swift
 ]
 

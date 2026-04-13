@@ -1,15 +1,30 @@
 import Foundation
 
+/// Transport modes for sing-box naive outbound and share URIs.
+/// naiveproxy proxy URIs are `https` or `quic`; v2rayN uses `naive+https://` and `naive+quic://`.
+/// HTTPS and HTTP/2 here share the same tunnel (HTTP/2 over TLS, sing-box `quic` false); QUIC is HTTP/3 (`quic` true).
 enum NaiveProxyType: String, CaseIterable, Codable, Identifiable {
     case https = "HTTPS"
     case http2 = "HTTP/2"
-    case http3 = "HTTP/3"
+    case http3 = "QUIC"
 
     static var allCases: [NaiveProxyType] {
-        [.https, .http2, .http3]
+        [.http3, .https, .http2]
     }
 
     var id: String { rawValue }
+
+    /// Short label for pickers (aligned with naiveproxy / v2rayN naming).
+    var pickerTitle: String {
+        switch self {
+        case .https:
+            return L10n.tr("HTTPS")
+        case .http2:
+            return L10n.tr("HTTP/2")
+        case .http3:
+            return L10n.tr("QUIC")
+        }
+    }
 
     var usesQUIC: Bool {
         self == .http3
@@ -27,7 +42,7 @@ enum NaiveProxyType: String, CaseIterable, Codable, Identifiable {
         case "HTTPS":
             self = .https
         default:
-            self = .https
+            self = .http3
         }
     }
 
@@ -41,7 +56,7 @@ struct NaiveServerProfile: Codable, Equatable, Identifiable {
     var id: UUID = UUID()
     var name: String = ""
     var host: String = ""
-    var type: NaiveProxyType = .https
+    var type: NaiveProxyType = .http3
     var port: String = "443"
     var user: String = ""
     var password: String = ""
@@ -60,7 +75,7 @@ struct NaiveServerProfile: Codable, Equatable, Identifiable {
         id: UUID = UUID(),
         name: String = "",
         host: String = "",
-        type: NaiveProxyType = .https,
+        type: NaiveProxyType = .http3,
         port: String = "443",
         user: String = "",
         password: String = ""
@@ -79,7 +94,7 @@ struct NaiveServerProfile: Codable, Equatable, Identifiable {
         id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         host = try container.decodeIfPresent(String.self, forKey: .host) ?? ""
-        type = try container.decodeIfPresent(NaiveProxyType.self, forKey: .type) ?? .https
+        type = try container.decodeIfPresent(NaiveProxyType.self, forKey: .type) ?? .http3
         port = try container.decodeIfPresent(String.self, forKey: .port) ?? "443"
         user = try container.decodeIfPresent(String.self, forKey: .user) ?? ""
         password = try container.decodeIfPresent(String.self, forKey: .password) ?? ""

@@ -453,7 +453,7 @@ naive_share_url() {
     die "Need base64 or openssl to build the share link."
   fi
   b64=$(printf '%s' "$b64" | tr -d '=')
-  printf 'https://%s?method=auto\n' "$b64"
+  printf 'naive+quic://%s?method=auto\n' "$b64"
 }
 
 show_share_link_and_qr() {
@@ -462,7 +462,7 @@ show_share_link_and_qr() {
 
   echo ""
   echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-  echo "  Share link (import in naive client — host, port, user, password, type HTTPS)"
+  echo "  Share link (import in naive client — host, port, user, password, type QUIC / HTTP/3)"
   echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
   echo "$share_url"
   echo ""

@@ -40,6 +40,7 @@
 		DBD80C279DC680492A263A4F /* Extension+RunBlocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9E7D9AB971BC36644CE83 /* Extension+RunBlocking.swift */; };
 		EC2FF4DCE19227D3DDE0A659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AA751794284EE30926D9F0 /* ContentView.swift */; };
 		F1A2B3C4D5E60718293A4B5C /* ShareProfileSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B3C4D5E60718293A4B5D /* ShareProfileSheet.swift */; };
+		B4D3C2A109876543210FEDC1 /* PasteConfigurationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3C2A109876543210FEDC0 /* PasteConfigurationSheet.swift */; };
 		FC927DA8A80C358D9A68EEB4 /* ExtensionStartOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2467E4C8C8F911844D7E45 /* ExtensionStartOptions.swift */; };
 		FDED5ED80ACE8E8F504D67B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B148638B4D184C045C4BAC /* Assets.xcassets */; };
 		FE8F62B569547785F0D5D40E /* AsyncNetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */; };
@@ -116,6 +117,7 @@
 		E707C5D38F529256856EFCBD /* ExtensionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionProvider.swift; sourceTree = "<group>"; };
 		E77CD17C30E0179FC461DEF8 /* build_libbox.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = build_libbox.sh; sourceTree = "<group>"; };
 		F1A2B3C4D5E60718293A4B5D /* ShareProfileSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareProfileSheet.swift; sourceTree = "<group>"; };
+		B4D3C2A109876543210FEDC0 /* PasteConfigurationSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasteConfigurationSheet.swift; sourceTree = "<group>"; };
 		F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncNetworkExtension.swift; sourceTree = "<group>"; };
 		FDFC33CAB4758CB4702BC0B7 /* Extension+Iterator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Extension+Iterator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 				225ACFC9A5DB7EA61835A394 /* ConnectionStore.swift */,
 				7AA1B2C3D4E5F60718293A4B0 /* AppdbVersionUpdateChecker.swift */,
 				F1A2B3C4D5E60718293A4B5D /* ShareProfileSheet.swift */,
+				B4D3C2A109876543210FEDC0 /* PasteConfigurationSheet.swift */,
 				0F9259D74D6A4C8182B75D04 /* QRCodeScannerView.swift */,
 				A5B148638B4D184C045C4BAC /* Assets.xcassets */,
 				A2B06F07D978F456C2635BB1 /* Info.plist */,
@@ -358,6 +361,7 @@
 				EC2FF4DCE19227D3DDE0A659 /* ContentView.swift in Sources */,
 				61D3F1866E7940FC210A1D65 /* ConnectionStore.swift in Sources */,
 				F1A2B3C4D5E60718293A4B5C /* ShareProfileSheet.swift in Sources */,
+				B4D3C2A109876543210FEDC1 /* PasteConfigurationSheet.swift in Sources */,
 				0F9259D74D6A4C8182B75D02 /* QRCodeScannerView.swift in Sources */,
 				B5C7817348D5D5D1A46C3FCF /* AppConfiguration.swift in Sources */,
 				FFB584B2AD964A21B19D6941 /* Localized.swift in Sources */,
@@ -541,7 +545,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;
@@ -613,7 +617,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;
