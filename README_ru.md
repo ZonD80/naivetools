@@ -4,7 +4,7 @@
 
 # All-In-One Наивный VPN
 
-Монорепозиторий с **iOS-клиентом** для NaiveProxy (Packet Tunnel + sing-box `Libbox`) и **run-and-forget скриптом сервера** на Caddy с плагином forwardproxy (naive).
+Монорепозиторий с **iOS и MacOS-клиентом** для NaiveProxy (Packet Tunnel + sing-box `Libbox`) и **run-and-forget скриптом сервера** на Caddy с плагином forwardproxy (naive).
 
 <p align="center">
   <a href="https://appdb.to/details/8ca8a41db219d2c36acca881628efb1d26e32115">
@@ -15,6 +15,8 @@
     />
   </a>
 </p>
+
+**TestFlight:** [бета через TestFlight](https://testflight.apple.com/join/5FsJzd5r). Публикация в Apple App Store пока в ожидании.
 
 ## Состав
 

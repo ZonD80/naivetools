@@ -6,7 +6,7 @@
 
 [Russian version](README_ru.md)
 
-A monorepo with an **iOS client** for NaiveProxy (Packet Tunnel + sing-box `Libbox`) and a **run-and-forget server script** using Caddy with the forwardproxy (naive) plugin.
+A monorepo with an **iOS and MacOS client** for NaiveProxy (Packet Tunnel + sing-box `Libbox`) and a **run-and-forget server script** using Caddy with the forwardproxy (naive) plugin.
 
 <p align="center">
   <a href="https://appdb.to/details/8ca8a41db219d2c36acca881628efb1d26e32115">
@@ -18,13 +18,15 @@ A monorepo with an **iOS client** for NaiveProxy (Packet Tunnel + sing-box `Libb
   </a>
 </p>
 
+**TestFlight:** [Join the beta](https://testflight.apple.com/join/5FsJzd5r). Apple's App Store publication is pending.
+
 ## Layout
 
-| Directory | Purpose                                                                                 |
-| --------- | --------------------------------------------------------------------------------------- |
-| `app/`    | `NaiveVPN` iOS app, tunnel extension, shared configuration code                         |
-| `misc/`   | Split archive of `Libbox.xcframework` (restore into `app/` — see below)                 |
-| `server/` | `start_server.sh` — install and run Caddy (naive forward proxy) on a Linux server       |
+| Directory | Purpose                                                                           |
+| --------- | --------------------------------------------------------------------------------- |
+| `app/`    | `NaiveVPN` iOS app, tunnel extension, shared configuration code                   |
+| `misc/`   | Split archive of `Libbox.xcframework` (restore into `app/` — see below)           |
+| `server/` | `start_server.sh` — install and run Caddy (naive forward proxy) on a Linux server |
 
 ## iOS app (`app/`)
 
