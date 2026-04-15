@@ -26,6 +26,12 @@
   <img src="screenshots/IMG_0009.png" alt="Скриншот Naive VPN 3" width="32%" />
 </p>
 
+### Конфигурация сервера
+
+<p align="center">
+  <img src="screenshots/server.png" alt="Конфигурация сервера" width="85%" />
+</p>
+
 ## Состав
 
 | Каталог   | Назначение                                                                          |

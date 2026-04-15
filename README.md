@@ -28,6 +28,12 @@ A monorepo with an **iOS and MacOS client** for NaiveProxy (Packet Tunnel + sing
   <img src="screenshots/IMG_0009.png" alt="Naive VPN screenshot 3" width="32%" />
 </p>
 
+### Server configuration
+
+<p align="center">
+  <img src="screenshots/server.png" alt="Server configuration" width="85%" />
+</p>
+
 ## Layout
 
 | Directory | Purpose                                                                           |
