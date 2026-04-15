@@ -18,6 +18,14 @@
 
 **TestFlight:** [бета через TestFlight](https://testflight.apple.com/join/5FsJzd5r). Публикация в Apple App Store пока в ожидании.
 
+## Скриншоты
+
+<p align="center">
+  <img src="screenshots/IMG_0007.png" alt="Скриншот Naive VPN 1" width="32%" />
+  <img src="screenshots/IMG_0008.png" alt="Скриншот Naive VPN 2" width="32%" />
+  <img src="screenshots/IMG_0009.png" alt="Скриншот Naive VPN 3" width="32%" />
+</p>
+
 ## Состав
 
 | Каталог   | Назначение                                                                          |

@@ -20,6 +20,14 @@ A monorepo with an **iOS and MacOS client** for NaiveProxy (Packet Tunnel + sing
 
 **TestFlight:** [Join the beta](https://testflight.apple.com/join/5FsJzd5r). Apple's App Store publication is pending.
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/IMG_0007.png" alt="Naive VPN screenshot 1" width="32%" />
+  <img src="screenshots/IMG_0008.png" alt="Naive VPN screenshot 2" width="32%" />
+  <img src="screenshots/IMG_0009.png" alt="Naive VPN screenshot 3" width="32%" />
+</p>
+
 ## Layout
 
 | Directory | Purpose                                                                           |
