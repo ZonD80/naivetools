@@ -9,7 +9,7 @@ enum NaiveProxyType: String, CaseIterable, Codable, Identifiable {
     case http3 = "QUIC"
 
     static var allCases: [NaiveProxyType] {
-        [.http3, .https, .http2]
+        [.https, .http2, .http3]
     }
 
     var id: String { rawValue }
@@ -42,7 +42,7 @@ enum NaiveProxyType: String, CaseIterable, Codable, Identifiable {
         case "HTTPS":
             self = .https
         default:
-            self = .http3
+            self = .https
         }
     }
 
@@ -56,7 +56,7 @@ struct NaiveServerProfile: Codable, Equatable, Identifiable {
     var id: UUID = UUID()
     var name: String = ""
     var host: String = ""
-    var type: NaiveProxyType = .http3
+    var type: NaiveProxyType = .https
     var port: String = "443"
     var user: String = ""
     var password: String = ""
@@ -75,7 +75,7 @@ struct NaiveServerProfile: Codable, Equatable, Identifiable {
         id: UUID = UUID(),
         name: String = "",
         host: String = "",
-        type: NaiveProxyType = .http3,
+        type: NaiveProxyType = .https,
         port: String = "443",
         user: String = "",
         password: String = ""
@@ -94,7 +94,7 @@ struct NaiveServerProfile: Codable, Equatable, Identifiable {
         id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         host = try container.decodeIfPresent(String.self, forKey: .host) ?? ""
-        type = try container.decodeIfPresent(NaiveProxyType.self, forKey: .type) ?? .http3
+        type = try container.decodeIfPresent(NaiveProxyType.self, forKey: .type) ?? .https
         port = try container.decodeIfPresent(String.self, forKey: .port) ?? "443"
         user = try container.decodeIfPresent(String.self, forKey: .user) ?? ""
         password = try container.decodeIfPresent(String.self, forKey: .password) ?? ""
