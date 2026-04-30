@@ -16,7 +16,7 @@
   </a>
 </p>
 
-**TestFlight:** [бета через TestFlight](https://testflight.apple.com/join/5FsJzd5r). Публикация в Apple App Store пока в ожидании.
+Публикация в Apple App Store пока в ожидании.
 
 ## Скриншоты
 

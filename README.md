@@ -18,7 +18,7 @@ A monorepo with an **iOS and MacOS client** for NaiveProxy (Packet Tunnel + sing
   </a>
 </p>
 
-**TestFlight:** [Join the beta](https://testflight.apple.com/join/5FsJzd5r). Apple's App Store publication is pending.
+Apple's App Store publication is pending.
 
 ## Screenshots
 

@@ -31,6 +31,7 @@
 		8ACBA57BC5536772CE520347 /* NaiveVPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C33239A2A2F900B3A7BAF /* NaiveVPNApp.swift */; };
 		A37EEE4A9DFDDAF1EAB25281 /* ExtensionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E707C5D38F529256856EFCBD /* ExtensionProvider.swift */; };
 		AE9F159B8760C411C66F1910 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54CA392E0FCC7AA2220474 /* PacketTunnelProvider.swift */; };
+		B4D3C2A109876543210FEDC1 /* PasteConfigurationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3C2A109876543210FEDC0 /* PasteConfigurationSheet.swift */; };
 		B5C7817348D5D5D1A46C3FCF /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D246599D4F7E1F60441D5F9 /* AppConfiguration.swift */; };
 		BF23A4E29C9543EA8CA91314 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8450C8CC60D94B55B6E6CE52 /* InfoPlist.strings */; };
 		C153E09A5B3EF83284D10182 /* NaiveProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5EF98B7890A21233D58B0 /* NaiveProfileStore.swift */; };
@@ -40,7 +41,6 @@
 		DBD80C279DC680492A263A4F /* Extension+RunBlocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9E7D9AB971BC36644CE83 /* Extension+RunBlocking.swift */; };
 		EC2FF4DCE19227D3DDE0A659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AA751794284EE30926D9F0 /* ContentView.swift */; };
 		F1A2B3C4D5E60718293A4B5C /* ShareProfileSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B3C4D5E60718293A4B5D /* ShareProfileSheet.swift */; };
-		B4D3C2A109876543210FEDC1 /* PasteConfigurationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3C2A109876543210FEDC0 /* PasteConfigurationSheet.swift */; };
 		FC927DA8A80C358D9A68EEB4 /* ExtensionStartOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2467E4C8C8F911844D7E45 /* ExtensionStartOptions.swift */; };
 		FDED5ED80ACE8E8F504D67B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B148638B4D184C045C4BAC /* Assets.xcassets */; };
 		FE8F62B569547785F0D5D40E /* AsyncNetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */; };
@@ -109,6 +109,7 @@
 		99646938B2634CFB2D0732FB /* NaiveVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaiveVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B06F07D978F456C2635BB1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B148638B4D184C045C4BAC /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4D3C2A109876543210FEDC0 /* PasteConfigurationSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasteConfigurationSheet.swift; sourceTree = "<group>"; };
 		C84DCD1AF7E882DFCB1626A3 /* NaiveTunnelExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NaiveTunnelExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C870561C3831DE634A857B1A /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		CA0C33239A2A2F900B3A7BAF /* NaiveVPNApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NaiveVPNApp.swift; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		E707C5D38F529256856EFCBD /* ExtensionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionProvider.swift; sourceTree = "<group>"; };
 		E77CD17C30E0179FC461DEF8 /* build_libbox.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = build_libbox.sh; sourceTree = "<group>"; };
 		F1A2B3C4D5E60718293A4B5D /* ShareProfileSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareProfileSheet.swift; sourceTree = "<group>"; };
-		B4D3C2A109876543210FEDC0 /* PasteConfigurationSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasteConfigurationSheet.swift; sourceTree = "<group>"; };
 		F67FF1ECC18DCA1DCD798D8E /* AsyncNetworkExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncNetworkExtension.swift; sourceTree = "<group>"; };
 		FDFC33CAB4758CB4702BC0B7 /* Extension+Iterator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Extension+Iterator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -536,17 +536,18 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = NaiveVPN/NaiveVPN.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F44ZS9HT2P;
+				DEVELOPMENT_TEAM = A59M2YXS84;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NaiveVPN/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Naive VPN";
+				INFOPLIST_KEY_CFBundleDisplayName = "Näive VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naiveios;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -561,7 +562,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = NaiveTunnelExtension/NaiveTunnelExtension.entitlements;
-				DEVELOPMENT_TEAM = F44ZS9HT2P;
+				DEVELOPMENT_TEAM = A59M2YXS84;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NaiveTunnelExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -569,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn.extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naiveios.extension;
 				PRODUCT_NAME = NaiveTunnelExtension;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -584,7 +585,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = NaiveTunnelExtension/NaiveTunnelExtension.entitlements;
-				DEVELOPMENT_TEAM = F44ZS9HT2P;
+				DEVELOPMENT_TEAM = A59M2YXS84;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NaiveTunnelExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -592,7 +593,7 @@
 					"$(inherited)",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn.extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naiveios.extension;
 				PRODUCT_NAME = NaiveTunnelExtension;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -608,17 +609,18 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = NaiveVPN/NaiveVPN.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F44ZS9HT2P;
+				DEVELOPMENT_TEAM = A59M2YXS84;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NaiveVPN/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Naive VPN";
+				INFOPLIST_KEY_CFBundleDisplayName = "Näive VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naivevpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naiveios;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
