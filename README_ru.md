@@ -16,7 +16,7 @@
   </a>
 </p>
 
-Публикация в Apple App Store пока в ожидании.
+[Бета в TestFlight](https://testflight.apple.com/join/uMD85SgV). Публикация в Apple App Store пока в ожидании.
 
 ## Скриншоты
 
