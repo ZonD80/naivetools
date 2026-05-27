@@ -62,6 +62,23 @@ enum L10n {
         "User is required.": "Требуется пользователь.",
         "Password is required.": "Требуется пароль.",
         "Port must be a number between 1 and 65535.": "Порт должен быть числом от 1 до 65535.",
+        "DNS": "DNS",
+        "Remote DNS": "Удалённый DNS",
+        "DNS Transport": "Транспорт DNS",
+        "DoH": "DoH",
+        "UDP": "UDP",
+        "Cloudflare": "Cloudflare",
+        "Google": "Google",
+        "Quad9": "Quad9",
+        "Custom": "Свой",
+        "DNS Server": "DNS-сервер",
+        "DNS TLS Name": "TLS-имя DNS",
+        "DNS Path": "Путь DNS",
+        "DNS Port": "Порт DNS",
+        "DNS server is required.": "Требуется DNS-сервер.",
+        "DNS TLS name is required when the server is an IP address.": "TLS-имя DNS обязательно, если сервер указан как IP-адрес.",
+        "DNS port must be a number between 1 and 65535.": "Порт DNS должен быть числом от 1 до 65535.",
+        "DNS path must start with /.": "Путь DNS должен начинаться с /.",
         "Opens appdb in Safari": "Открывает appdb в Safari"
     ]
 

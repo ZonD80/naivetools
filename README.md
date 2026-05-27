@@ -23,9 +23,17 @@ A monorepo with an **iOS and MacOS client** for NaiveProxy (Packet Tunnel + sing
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/IMG_0007.png" alt="Naive VPN screenshot 1" width="32%" />
-  <img src="screenshots/IMG_0008.png" alt="Naive VPN screenshot 2" width="32%" />
-  <img src="screenshots/IMG_0009.png" alt="Naive VPN screenshot 3" width="32%" />
+  <img src="screenshots/iphone/iphone-01.png" alt="Naive VPN screenshot 1" width="32%" />
+  <img src="screenshots/iphone/iphone-02.png" alt="Naive VPN screenshot 2" width="32%" />
+  <img src="screenshots/iphone/iphone-03.png" alt="Naive VPN screenshot 3" width="32%" />
+</p>
+
+### iPad
+
+<p align="center">
+  <img src="screenshots/ipad/ipad-01.png" alt="Naive VPN iPad screenshot 1" width="32%" />
+  <img src="screenshots/ipad/ipad-02.png" alt="Naive VPN iPad screenshot 2" width="32%" />
+  <img src="screenshots/ipad/ipad-03.png" alt="Naive VPN iPad screenshot 3" width="32%" />
 </p>
 
 ### Server configuration

@@ -21,9 +21,17 @@
 ## Скриншоты
 
 <p align="center">
-  <img src="screenshots/IMG_0007.png" alt="Скриншот Naive VPN 1" width="32%" />
-  <img src="screenshots/IMG_0008.png" alt="Скриншот Naive VPN 2" width="32%" />
-  <img src="screenshots/IMG_0009.png" alt="Скриншот Naive VPN 3" width="32%" />
+  <img src="screenshots/iphone/iphone-01.png" alt="Скриншот Naive VPN 1" width="32%" />
+  <img src="screenshots/iphone/iphone-02.png" alt="Скриншот Naive VPN 2" width="32%" />
+  <img src="screenshots/iphone/iphone-03.png" alt="Скриншот Naive VPN 3" width="32%" />
+</p>
+
+### iPad
+
+<p align="center">
+  <img src="screenshots/ipad/ipad-01.png" alt="Скриншот Naive VPN для iPad 1" width="32%" />
+  <img src="screenshots/ipad/ipad-02.png" alt="Скриншот Naive VPN для iPad 2" width="32%" />
+  <img src="screenshots/ipad/ipad-03.png" alt="Скриншот Naive VPN для iPad 3" width="32%" />
 </p>
 
 ### Конфигурация сервера

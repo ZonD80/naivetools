@@ -130,6 +130,42 @@ struct ContentView: View {
                         .autocorrectionDisabled()
                 }
 
+                Section(L10n.tr("DNS")) {
+                    Picker(L10n.tr("Remote DNS"), selection: $connectionStore.profile.remoteDNSPreset) {
+                        ForEach(RemoteDNSPreset.allCases) { preset in
+                            Text(preset.pickerTitle).tag(preset)
+                        }
+                    }
+
+                    Picker(L10n.tr("DNS Transport"), selection: $connectionStore.profile.remoteDNSTransport) {
+                        ForEach(RemoteDNSTransport.allCases) { transport in
+                            Text(transport.pickerTitle).tag(transport)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+
+                    if connectionStore.profile.remoteDNSPreset == .custom {
+                        TextField(L10n.tr("DNS Server"), text: $connectionStore.profile.customDNSServer)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
+                            .keyboardType(.URL)
+
+                        if connectionStore.profile.remoteDNSTransport.usesDoH {
+                            TextField(L10n.tr("DNS TLS Name"), text: $connectionStore.profile.customDNSTLSName)
+                                .textInputAutocapitalization(.never)
+                                .autocorrectionDisabled()
+
+                            TextField(L10n.tr("DNS Path"), text: $connectionStore.profile.customDNSPath)
+                                .textInputAutocapitalization(.never)
+                                .autocorrectionDisabled()
+                                .keyboardType(.URL)
+                        }
+
+                        TextField(L10n.tr("DNS Port"), text: $connectionStore.profile.customDNSPort)
+                            .keyboardType(.numberPad)
+                    }
+                }
+
                 Section(L10n.tr("Status")) {
                     HStack {
                         Text(L10n.tr("VPN"))

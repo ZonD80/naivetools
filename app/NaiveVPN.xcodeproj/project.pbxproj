@@ -546,7 +546,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naiveios;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;
@@ -570,6 +570,7 @@
 					"$(inherited)",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naiveios.extension;
 				PRODUCT_NAME = NaiveTunnelExtension;
 				SDKROOT = iphoneos;
@@ -593,6 +594,7 @@
 					"$(inherited)",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naiveios.extension;
 				PRODUCT_NAME = NaiveTunnelExtension;
 				SDKROOT = iphoneos;
@@ -619,7 +621,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengix.naiveios;
 				PRODUCT_NAME = NaiveVPN;
 				SDKROOT = iphoneos;
