@@ -4,6 +4,16 @@
 
 # All-In-One Наивный VPN
 
+[English version](README.md)
+
+> **Режим поддержки — используйте [Hopper](https://github.com/ZonD80/hopper)**
+>
+> Этот проект получит **только обновления безопасности** и **скоро будет заброшен**.
+>
+> NaiveProxy блокируют или режут в ряде враждебных стран. Я сделал **лучшую замену** — **[ɹǝddoH (Hopper)](https://github.com/ZonD80/hopper)** — трафик идёт через **SSH** (самый распространённый протокол в интернете) с поддержкой **многоузловых цепочек**. Используйте его.
+>
+> Apple пометила это приложение как спам при модерации App Store. Мне лень подавать в суд. f\*ck Apple.
+
 Монорепозиторий с **iOS и MacOS-клиентом** для NaiveProxy (Packet Tunnel + sing-box `Libbox`) и **run-and-forget скриптом сервера** на Caddy с плагином forwardproxy (naive).
 
 <p align="center">
@@ -15,8 +25,6 @@
     />
   </a>
 </p>
-
-[Бета в TestFlight](https://testflight.apple.com/join/uMD85SgV). Публикация в Apple App Store пока в ожидании.
 
 ## Скриншоты
 

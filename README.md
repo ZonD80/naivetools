@@ -6,6 +6,14 @@
 
 [Russian version](README_ru.md)
 
+> **Maintenance mode — use [Hopper](https://github.com/ZonD80/hopper) instead**
+>
+> This project will receive **security updates only** and will be **abandoned soon**.
+>
+> NaiveProxy is blocked or throttled in some hostile countries. I built a **better successor** — **[ɹǝddoH (Hopper)](https://github.com/ZonD80/hopper)** — that tunnels traffic over **SSH** (the most commonly used protocol on the internet) and supports **multi-hop chains**. Use that project going forward.
+>
+> Apple flagged this app as spam during App Store review. I am too lazy to file a lawsuit. f\*ck Apple.
+
 A monorepo with an **iOS and MacOS client** for NaiveProxy (Packet Tunnel + sing-box `Libbox`) and a **run-and-forget server script** using Caddy with the forwardproxy (naive) plugin.
 
 <p align="center">
@@ -17,8 +25,6 @@ A monorepo with an **iOS and MacOS client** for NaiveProxy (Packet Tunnel + sing
     />
   </a>
 </p>
-
-[TestFlight beta](https://testflight.apple.com/join/uMD85SgV). Apple's App Store publication is pending.
 
 ## Screenshots
 
